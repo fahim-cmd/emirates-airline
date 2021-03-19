@@ -1,9 +1,10 @@
 import { Button } from 'bootstrap';
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Tickets = (props) => {
-    const {title, price, description} = props.ticket;
+    const {title, price, description, id} = props.ticket;
 
     return (
         <div> 
@@ -13,7 +14,7 @@ const Tickets = (props) => {
                     <Card.Text>
                         {description}
                     </Card.Text>
-                    <button class="btn btn-outline-info">Buy Now</button>
+                    <button class="btn btn-outline-info"><Link to={`/ticketDetails/${id}`}>Buy Now</Link> </button>
                     <p>Price: ${price}</p>
                 </Card.Body>
             </Card>
