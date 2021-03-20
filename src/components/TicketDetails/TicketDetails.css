@@ -1,0 +1,11 @@
+.destination{
+    border: 1px solid lightgrey;
+    padding: 10px;
+    margin-left: 20px;
+}
+.destination button {
+    width: 100%;
+}
+.destination input {
+    width: 100%;
+}

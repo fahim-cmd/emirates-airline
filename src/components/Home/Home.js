@@ -9,7 +9,7 @@ const Home = () => {
         {
             id: 1,
             title: 'one time ticket',
-            description: 'Standard Single Rooms are designed in open -concept living area and have many facilities.',
+            description: 'Standard Single chair are designed in open -concept front area and have many facilities.',
             imgUrl: 'https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/offers/offer-images/burj-al-arab-presidential-suite-living-room-4-hero.jpg',
            
             price: 119
@@ -17,7 +17,7 @@ const Home = () => {
         {
             id: 2,
             title: 'one day pass',
-            description: 'Superior Double Rooms are perfectly equipped for traveling couples or friends.',
+            description: 'Superior Double chair are perfectly equipped for traveling couples or friends.',
             imgUrl: 'https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/offers/offer-images/burj-al-arab-royal-suite-staircase-5-hero.jpg',
             
             price: 149
@@ -25,7 +25,7 @@ const Home = () => {
         {
             id: 3,
             title: 'Monthly pass',
-            description: ' Have lots of in-room facilities and are designed in open-concept living area.',
+            description: ' Have some of in-room facilities and are designed in open-concept internal area.',
             imgUrl: 'https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/burj-al-arab-jumeirah/room/presidential-two-bedroom-suite/burj-al-arab-presidential-suite-guest-bedroom_6-4_landscape/burj-al-arab-presidential-suite-guest-bedroom_16-9_landscape.jpg?w=2080',
            
             price: 192
@@ -33,7 +33,7 @@ const Home = () => {
         {
             id: 4,
             title: 'Annual pass',
-            description: ' Have lots of in-room facilities and are designed in open-concept living area.',
+            description: ' Have some  of in-room facilities and are designed in open-concept internal area.',
             imgUrl: 'https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/burj-al-arab-jumeirah/room/presidential-two-bedroom-suite/burj-al-arab-presidential-suite-guest-bedroom_6-4_landscape/burj-al-arab-presidential-suite-guest-bedroom_16-9_landscape.jpg?w=2080',
             
             price: 199

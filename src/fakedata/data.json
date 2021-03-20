@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "pickFrom": "dhanmondi",
+    "pickTo": "kolabagan",
+    "imgURL": "https://i.ibb.co/SvbPw8b/tickets-3.png",
+    "price": 119
+  }, {
+    "id": 2,
+    "pickFrom": "motijhil",
+    "pickTo": "gabtoli",
+    "imgURL": "https://i.ibb.co/SvbPw8b/tickets-3.png",
+    "price": 149
+  }, {
+    "id": 3,
+    "pickFrom": "new Market",
+    "pickTo": "abdullahpur",
+    "imgURL": "https://i.ibb.co/SvbPw8b/tickets-3.png",
+    "price": 192
+  }, {
+    "id": 4,
+    "pickFrom": "mohammodpur",
+    "pickTo": "sahabag",
+    "imgURL": "https://i.ibb.co/SvbPw8b/tickets-3.png",
+    "price": 199
+  }]
