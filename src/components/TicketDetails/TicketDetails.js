@@ -5,39 +5,26 @@ import fakedata from '../../fakedata/data.json';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import GoogleMap from '../GoogleMap/GoogleMap';
+import { useEffect } from 'react';
 
 const TicketDetails = () => {
     // const [user, setUser] = useContext(UserContext);
 
+    
     const { id } = useParams();
     const newId = id;
+    console.log(newId)
 
-    const fakedataItem = fakedata.filter(item => item.id === newId)
-    // setUser(fakedataItem)
-    // console.log(user)
-    const items = fakedataItem;
-  
-    const handleSearch = () => {
-        const searchBox = document.getElementById('searchBox').innerHTML = '';
-        searchBox.innerHTML = `
-            <div>
-                <div> 
-                    <p>Mirpur</p>
-                    <pre>to</pre>
-                    <p>dhanmondi</p>
-                </div>
-                <div>
+    // useEffect(() => {
+    //    setUser(fakedata)
+    //    console.log(user)
+    // }, [])
 
-                </div>
-
-            </div>
-        `;
-    }
 
 
     return (
         <>
-            <div className=" d-flex " >
+            <div className="d-flex container mapPage" >
                 <div id="searchBox" className=" col-md-3 destination">
                     <label htmlFor="">Pick From</label>
                     <input type="search" name="" id="" /> <br />
@@ -47,7 +34,7 @@ const TicketDetails = () => {
                     <input type="search" name="" id="" /> <br />
 
                     <br />
-                    <button onClick={handleSearch}>Search</button>
+                    <button >Search</button>
                 </div>
                 <div className="col-md-8">
                     <GoogleMap></GoogleMap>

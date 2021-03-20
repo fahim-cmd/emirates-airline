@@ -4,8 +4,12 @@ import '../NavbarRoute/NavbarRoute.css';
 
 
 const NavbarRoute = () => {
+    const navStyle = {
+        backgroundColor: '#60A3D9',
+        fontWeight: 'bold'
+    }
     return (
-        <div>
+        <div style={navStyle}>
              <nav className="nav d-flex justify-content-end">
                 <ul>
                     <li>
@@ -21,7 +25,9 @@ const NavbarRoute = () => {
                         <Link to="/contact">contact</Link>
                     </li>
                     <li>
-                        <Link to="/login"><button>Login</button></Link>
+                        <Link to="/login"><button className="btn btn-outline-light">
+                            Login
+                            </button></Link>
                     </li>
                 </ul>
             </nav>

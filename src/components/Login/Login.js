@@ -16,10 +16,11 @@ if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig)
 }
 
-// export const NewUserContext = createContext();
+
 
 const Login = () => {
     const [user, setUser] = useContext(UserContext)
+    // console.log(user)
 
     const [newUser, setNewUser] = useState(false);
 
@@ -109,27 +110,28 @@ const Login = () => {
             .then((result) => {
                 const { displayName, email } = result.user;
                 const signedInUser = { name: displayName, email: email }
-                console.log((signedInUser))
+                console.log(signedInUser)
                 setUser(signedInUser);
+                console.log(user)
                 history.replace(from)
             })
             .catch((error) => {
-                var errorCode = error.code;
+                // var errorCode = error.code;
                 var errorMessage = error.message;
-                var email = error.email;
-                var credential = error.credential;
-                console.log(errorCode, errorMessage, email)
+                // var email = error.email;
+                // var credential = error.credential;
+                console.log( errorMessage)
                 // ...
             });
     }
 
     return (
-        <div>
+        <div style={{backgroundColor: '#003B73', padding: '20px'}}>
 
-            <Form onSubmit={handleFormSubmit} className="formStyle">
+            <Form onSubmit={handleFormSubmit} className="formStyle" style={{backgroundColor: 'white'}}>
 
                 <input type="checkbox" onChange={() => { setNewUser(!newUser) }} name="newUser" id="" />
-                <label htmlFor="newUser">New User Sign in</label>
+                <label htmlFor="newUser"> { newUser ? 'new user sign up' : 'Sign in'}</label>
 
                 {newUser && <Form.Group >
                     <Form.Label>Username</Form.Label>

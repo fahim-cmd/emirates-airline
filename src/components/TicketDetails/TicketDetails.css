@@ -2,10 +2,16 @@
     border: 1px solid lightgrey;
     padding: 10px;
     margin-left: 20px;
+    border-radius: 15px;
+    margin-right: 40px;
 }
 .destination button {
     width: 100%;
 }
 .destination input {
     width: 100%;
+}
+.mapPage{
+    margin-top: 25px;
+    margin-bottom:20px;
 }

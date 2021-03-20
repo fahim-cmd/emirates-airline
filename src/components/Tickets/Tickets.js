@@ -8,13 +8,13 @@ const Tickets = (props) => {
 
     return (
         <div> 
-            <Card style={{ width: '13rem', height: '16rem', marginLeft: '15px', marginTop: '110px'}}>
+            <Card style={{ width: '13rem', height: '16rem', marginLeft: '15px', marginTop: '110px', color: 'white', backgroundImage: ' linear-gradient(#41729F, #5885AF, #274472)'}}>
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
                         {description}
                     </Card.Text>
-                    <button class="btn btn-outline-info"><Link to={`/ticketDetails/${id}`}>Buy Now</Link> </button>
+                    <button class="btn btn-outline-light "><Link to={`/ticketDetails/${id}`}>Buy Now</Link> </button>
                     <p>Price: ${price}</p>
                 </Card.Body>
             </Card>
