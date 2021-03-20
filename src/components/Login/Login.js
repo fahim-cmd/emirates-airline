@@ -1,12 +1,11 @@
-import React, { createContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import firebaseConfig from '../firebase.config';
 import firebase from "firebase/app";
 import "firebase/auth";
 import './Login.css';
-import fb from '../../images/fb.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { useContext } from 'react';
@@ -20,17 +19,8 @@ if (firebase.apps.length === 0) {
 
 const Login = () => {
     const [user, setUser] = useContext(UserContext)
-    // console.log(user)
 
     const [newUser, setNewUser] = useState(false);
-
-    // const [user, setUser] = useState({
-    //     name: '',
-    //     email: '',
-    //     password: '',
-    //     error: '',
-    //     success: false
-    // })
 
     //redirect ticketDetails page 
     let history = useHistory();
@@ -52,9 +42,7 @@ const Login = () => {
         if (isFormValid) {
             const newUserInfo = { ...user };
             newUserInfo[e.target.name] = e.target.value;
-
             setUser(newUserInfo)
-            console.log(user)
         }
     }
 
@@ -63,13 +51,11 @@ const Login = () => {
         if (newUser && user.email && user.password) {
             firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
                 .then((userCredential) => {
-                    // var user = userCredential.user;
                     const newUserInfo = { ...user }
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo);
                     history.replace(from)
-                    // updateUserName(user.name)
                 })
                 .catch((error) => {
                     const newUserInfo = { ...user }
@@ -81,12 +67,10 @@ const Login = () => {
         if (!newUser && user.email && user.password) {
             firebase.auth().signInWithEmailAndPassword(user.email, user.password)
                 .then((userCredential) => {
-                    // var user = userCredential.user;
                     const newUserInfo = { ...user }
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo);
-                    console.log(user)
                     history.replace(from)
                 })
                 .catch((error) => {
@@ -99,8 +83,8 @@ const Login = () => {
         e.preventDefault();
     }
 
-    //facebook login 
 
+    //facebook login 
     const handleFbSignIn = () => {
         var FbProvider = new firebase.auth.FacebookAuthProvider();
 
@@ -110,28 +94,22 @@ const Login = () => {
             .then((result) => {
                 const { displayName, email } = result.user;
                 const signedInUser = { name: displayName, email: email }
-                console.log(signedInUser)
                 setUser(signedInUser);
-                console.log(user)
                 history.replace(from)
             })
             .catch((error) => {
-                // var errorCode = error.code;
-                var errorMessage = error.message;
-                // var email = error.email;
-                // var credential = error.credential;
-                console.log( errorMessage)
-                // ...
+                const errorMessage = error.message;
+                console.log(errorMessage)
             });
     }
 
     return (
-        <div style={{backgroundColor: '#003B73', padding: '20px'}}>
+        <div style={{ backgroundColor: '#003B73', padding: '20px', height: '500px' }}>
 
-            <Form onSubmit={handleFormSubmit} className="formStyle" style={{backgroundColor: 'white'}}>
+            <Form onSubmit={handleFormSubmit} className="formStyle" style={{ backgroundColor: 'white' }}>
 
                 <input type="checkbox" onChange={() => { setNewUser(!newUser) }} name="newUser" id="" />
-                <label htmlFor="newUser"> { newUser ? 'new user sign up' : 'Sign in'}</label>
+                <label htmlFor="newUser"> {newUser ? 'new user sign up' : 'Sign in'}</label>
 
                 {newUser && <Form.Group >
                     <Form.Label>Username</Form.Label>

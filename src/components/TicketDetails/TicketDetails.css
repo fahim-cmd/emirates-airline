@@ -1,17 +1,39 @@
-.destination{
-    border: 1px solid lightgrey;
+.destination {
     padding: 10px;
     margin-left: 20px;
     border-radius: 15px;
     margin-right: 40px;
+    background-color: #1c1427;
+    color: white;
+    font-weight: bold;
+    height: 250px;
 }
+
 .destination button {
     width: 100%;
 }
+
 .destination input {
     width: 100%;
 }
-.mapPage{
+
+.mapPage {
     margin-top: 25px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
+}
+
+.dollar {
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px lightgrey;
+}
+
+.dollar img {
+    height: 30px;
+    margin-right: 15px;
+}
+
+.dollar p {
+    margin-right: 10px;
 }
