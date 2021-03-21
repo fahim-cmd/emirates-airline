@@ -1,8 +1,10 @@
 .formStyle {
-    margin: 2% 35% 0 35%;
+    margin: 0 auto;
     border: 1px solid lightgrey;
     padding: 20px;
     border-radius: 10px;
+    width: 300px;
+
 }
 
 .btnStyle {
@@ -11,10 +13,11 @@
 }
 
 .fbBtn {
-    border: 1px solid lightgrey;
-    padding: 1% 9%;
+    border: none;
+    margin: auto;
     border-radius: 30px;
-    margin-left: 34%;
-    margin-top: 2%;
     background-color: white;
+    display: block;
+    margin-top: 20px;
+    padding: 5px 40px;
 }

@@ -1,8 +1,9 @@
 .destination {
     padding: 10px;
-    margin-left: 20px;
+    margin-left: 40px;
     border-radius: 15px;
-    margin-right: 40px;
+    margin-right: 10px;
+    margin-bottom: 40px;
     background-color: #1c1427;
     color: white;
     font-weight: bold;

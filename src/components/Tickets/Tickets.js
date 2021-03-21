@@ -14,8 +14,9 @@ const Tickets = (props) => {
                         <Card.Text>
                             {description}
                         </Card.Text>
-                        <button class="btn btn-outline-light "><Link to={`/ticketDetails/${id}`}>Buy Now</Link> </button>
-                        <p>Price: ${price}</p>
+                        <button class="btn btn-outline-light mb-2"><Link to={`/ticketDetails/${id}`}>Buy Now</Link> </button>
+                        
+                        <p style={{marginBottom: '5px'}}>Price: ${price}</p>
                     </Card.Body>
                 </Card>
             </div>

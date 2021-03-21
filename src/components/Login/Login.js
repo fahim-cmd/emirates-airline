@@ -104,12 +104,12 @@ const Login = () => {
     }
 
     return (
-        <div style={{ backgroundColor: '#003B73', padding: '20px', height: '500px' }}>
+        <div style={{ backgroundColor: '#003B73', padding: '20px', height: '540px' }}>
 
             <Form onSubmit={handleFormSubmit} className="formStyle" style={{ backgroundColor: 'white' }}>
 
                 <input type="checkbox" onChange={() => { setNewUser(!newUser) }} name="newUser" id="" />
-                <label htmlFor="newUser"> {newUser ? 'new user sign up' : 'Sign in'}</label>
+                <label style={{marginLeft: '4px'}} htmlFor="newUser"> {newUser ? 'new user sign up' : 'Sign in'}</label>
 
                 {newUser && <Form.Group >
                     <Form.Label>Username</Form.Label>
@@ -136,7 +136,7 @@ const Login = () => {
                 </Button>
             </Form>
 
-            <div>
+            <div className="container">
                 <button className="fbBtn" onClick={handleFbSignIn}><FontAwesomeIcon icon={faFacebook} />sign in with facebook</button>
             </div>
 

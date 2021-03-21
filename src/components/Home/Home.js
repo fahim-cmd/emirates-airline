@@ -36,7 +36,7 @@ const Home = () => {
     ]
 
     return (
-        <div style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${emirates})`, width: '100%', height: '580px' }} >
+        <div style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${emirates})`, width: '100%', height: '580px', backgroundRepeat: 'no-repeat' }} >
 
             <div className="row" style={{ marginLeft: '90px' }}>
                 {
